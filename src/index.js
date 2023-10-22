@@ -24,8 +24,8 @@ const getRandomIntInRange = (min, max) => Math.floor(Math.random() * max) + min
 const handleGuessingGame = () => {
   const getUserNumber = Number(prompt('Pick a number: '))
   const rightNumber = getRandomIntInRange(0, 11)
-  if (getUserNumber === rightNumber) console.log(`Congrats ${name}! You Win!`)
-  if (getUserNumber !== rightNumber) console.log(`Sorry ${name}. Better luck next time.\nThe number was: ${rightNumber}`)
+  if (getUserNumber === rightNumber) return `Congrats ${name}! You Win!`
+  if (getUserNumber !== rightNumber) return `Sorry ${name}. Better luck next time.\nThe number was: ${rightNumber}`
 }
 
 const wordsOfWisdom = [
@@ -61,7 +61,7 @@ const chooseOption = () => {
 // Primary runner function
 const main = () => {
   welcomeAndGetName()
-  chooseOption()
+  console.log(chooseOption())
   sayGoodbye()
 }
 main();
