@@ -61,7 +61,7 @@ const chooseOption = () => {
 // Primary runner function
 const main = () => {
   welcomeAndGetName()
-  console.log(chooseOption())
+  chooseOption()
   sayGoodbye()
 }
 main();
